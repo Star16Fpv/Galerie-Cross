@@ -1,50 +1,43 @@
 <!DOCTYPE html>
 <html>
-  <head>
-
-
-
-<div style="text-align: center;">
-  <h1 style="color: blue;font-size: 60px;">Star16Fpv</h1>
-</div>
-
-
-
-
-
-<div style="position: fixed; top: 30; right: 80;">
-<h2 style="color: black;font-size: 30px;background-color: white;">Album Photo vidéo drone et Gopro</h2>
-</div>
-
-
-
-
-
-    <title>Page d'accueil</title>
+<head>
+    <meta charset="UTF-8">
+    <title>Page d'Album</title>
     <style>
-      body {
-        background-image: url("https://www.canon.fr/media/eos-1d-x-markii-image-management_tcm79-1345922.jpg");
-        background-size: cover;
-        background-position: center;
-      }
-      button {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  font-size: 40px; /* Augmente la taille du texte à 24 pixels */
-border-radius: 10px; /* Ajoute des coins arrondis de 10 pixels */
-}
+        /* Définir l'image de fond */
+        body {
+            background-image: url('https://www.canon.fr/media/eos-1d-x-markii-image-management_tcm79-1345922.jpg');
+            background-size: cover; /* Pour couvrir tout l'écran */
+            background-repeat: no-repeat; /* Pour éviter la répétition de l'image */
+            background-attachment: fixed; /* Pour garder l'image fixe lorsque la page défile */
+            text-align: center; /* Centrer le contenu horizontalement */
+        }
+
+        /* Style du titre */
+        h1 {
+            color: white; /* Couleur du texte */
+            padding-top: 100px; /* Espacement depuis le haut de la page */
+        }
+
+        /* Style du bouton */
+        .album-button {
+            display: inline-block; /* Afficher en tant qu'élément en ligne pour ajuster la largeur au contenu */
+            background-color: #007BFF; /* Couleur de fond du bouton */
+            color: black; /* Couleur du texte du bouton */
+            padding: 50px 100px; /* Espacement interne du bouton */
+            text-decoration: none; /* Supprimer la soulignement par défaut */
+            font-size: 35px; /* Taille de la police */
+            border: none; /* Supprimer la bordure */
+            border-radius: 40px; /* Coins arrondis */
+           
+        }
     </style>
-  </head>
-  <body>
-    <button onclick="window.location.href='chemin/vers/votre/page.html'">ALBUMS</button>
-  </body>
+</head>
+<body>
+    <!-- Titre de la page -->
+    <h1>Gable Mathias digitale Albume (2)</h1>
+
+    <!-- Bouton d'Album -->
+    <a class="album-button" href="https://youtube.com">ALBUMS</a>
+</body>
 </html>
-
-
-
-
-
-
-
