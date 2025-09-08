@@ -1,135 +1,109 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
 <head>
-    <title>photosgable.online</title>
-    <link rel="icon" href="https://lh3.google.com/u/2/d/1Dw_4CBKwq6-ugehYfjH0yuT_Mbyl54MC=w919-h951-iv1">
-	
-    <meta charset="UTF-8">
-    <title>Page d'Album</title>
-    <style>
-        /* Définir l'image de fond */
-        body {
-            background-image: url('eos-1d-x-markii-image-management_tcm79-1345922 (1).jpg');
-            background-size: cover; /* Pour couvrir tout l'écran */
-            background-repeat: no-repeat; /* Pour éviter la répétition de l'image */
-            background-attachment: fixed; /* Pour garder l'image fixe lorsque la page défile */
-            text-align: center; /* Centrer le contenu horizontalement */
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>photosgable.online</title>
+  <link rel="icon" href="https://lh3.google.com/u/2/d/1Dw_4CBKwq6-ugehYfjH0yuT_Mbyl54MC=w919-h951-iv1">
 
-        /* Style du titre */
-        h1 {
-            color: white; /* Couleur du texte */
-            padding-top: 100px; /* Espacement depuis le haut de la page */
-        }
+  <!-- Police moderne -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
-       
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Montserrat', sans-serif;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
 
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 40px;
+    }
 
-        /* Style du bouton */
-        .album-button {
-            display: inline-block; /* Afficher en tant qu'élément en ligne pour ajuster la largeur au contenu */
-            background-color: #001eff; /* Couleur de fond du bouton */
-            color: black; /* Couleur du texte du bouton */
-            padding: 25px 70px; /* Espacement interne du bouton */
-            text-decoration: none; /* Supprimer la soulignement par défaut */
-            font-size: 35px; /* Taille de la police */
-            border: none; /* Supprimer la bordure */
-            border-radius: 40px; /* Coins arrondis */
-        }
-        .album-button2 {
-            display: inline-block; /* Afficher en tant qu'élément en ligne pour ajuster la largeur au contenu */
-            background-color: #ffffff; /* Couleur de fond du bouton */
-            color: black; /* Couleur du texte du bouton */
-            padding: 25px 70px; /* Espacement interne du bouton */
-            text-decoration: none; /* Supprimer la soulignement par défaut */
-            font-size: 35px; /* Taille de la police */
-            border: none; /* Supprimer la bordure */
-            border-radius: 40px; /* Coins arrondis */
-            margin-top: 50px;
-        }
-        .album-button3 {
-            display: inline-block; /* Afficher en tant qu'élément en ligne pour ajuster la largeur au contenu */
-            background-color: #ff0000; /* Couleur de fond du bouton */
-            color: black; /* Couleur du texte du bouton */
-            padding: 25px 70px; /* Espacement interne du bouton */
-            text-decoration: none; /* Supprimer la soulignement par défaut */
-            font-size: 35px; /* Taille de la police */
-            border: none; /* Supprimer la bordure */
-            border-radius: 40px; /* Coins arrondis */
-            margin-top: 50px;
-        }
-        /* Style de l'image */
-        .album-cover {
-            width: 100px; /* Largeur de l'image */
-            height: 100px; /* Hauteur de l'image */
-            margin-top: 100px; /* Espacement depuis le bouton */
-        }
+    header img {
+      height: 60px;
+      border-radius: 10px;
+    }
 
-        .top-left-image {
-            position: absolute;
-            top: 70px;
-            left: 20px;
-            width: 50px;
-            height: auto;
-        }
-	    
-        .top-right-image {
-            position: absolute;
-            top: 70px;
-            right: 20px;
-            width: 50px;
-            height: auto;
-        }
+    h1 {
+      text-align: center;
+      margin-top: 100px;
+      font-size: 2.5rem;
+      letter-spacing: 2px;
+    }
 
-        .topp-left-image {
-            position: absolute;
-            top: -90px;
-            left: 20px;
-            width: 150px;
-            height: auto;
-            border: none; /* Supprimer la bordure */
-            border-radius: 10px; /* Coins arrondis */
-        }
-        .topp-right-image {
-            position: absolute;
-            top: -90px;
-            right: 20px;
-            width: 200px;
-            height: auto;
-        }
-	    
-	/* Style du texte en bas à droite */
-	.bottom-right-text {
-            position: absolute;
-            bottom: 10px; /* Espacement depuis le bas de la page */
-            right: 20px; /* Espacement depuis la droite de la page */
-            color: white; /* Couleur du texte */
-            font-size: 20px; /* Taille de la police */
-        }
+    .btn-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+      margin-top: 60px;
+    }
 
-        
-    </style>
+    .album-button {
+      display: inline-block;
+      background: #0066ff;
+      color: white;
+      padding: 20px 60px;
+      font-size: 1.5rem;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    .album-button:hover {
+      background: #0044aa;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    }
+
+    footer {
+      margin-top: auto;
+      text-align: right;
+      padding: 15px 30px;
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    @media (max-width: 600px) {
+      h1 {
+        font-size: 1.8rem;
+        margin-top: 60px;
+      }
+      .album-button {
+        padding: 15px 40px;
+        font-size: 1.2rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <!-- Titre de la page -->
-    <h1>Gable Mathias Digital Albums</h1>
 
-	<!-- Ajout du texte en bas à droite de la page -->
-	<div class="bottom-right-text">
-	    Version 0.14
-	</div>
-
-    <a> 
-        <img class="album-cover topp-left-image" src="drapeaualsa" alt="">
-    </a>
-	
+  <header>
+    <img src="drapeaualsa" alt="Logo gauche">
     <a href="https://www.facebook.com/mc.rixheim/?locale=fr_FR">
-        <img src="mcrx" alt="Image en haut à droite" class="album-cover topp-right-image">
+      <img src="mcrx" alt="Logo MCR">
     </a>
+  </header>
 
+  <h1>📸 Gable Mathias Digital Albums</h1>
 
-    <!-- Bouton d'Album -->
+  <div class="btn-container">
     <a class="album-button" href="https://star16fpv.github.io/crossalbums/">LES ALBUMS PHOTOS CROSS</a>
+  </div>
+
+  <footer>
+    Version 0.14
+  </footer>
+
 </body>
 </html>
-
