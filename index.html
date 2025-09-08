@@ -1,119 +1,173 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>photosgable.online</title>
-  <link rel="icon" href="https://lh3.google.com/u/2/d/1Dw_4CBKwq6-ugehYfjH0yuT_Mbyl54MC=w919-h951-iv1">
-
-  <!-- Police moderne -->
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-
-  <style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Photosgable.online</title>
+<link rel="icon" href="https://lh3.google.com/u/2/d/1Dw_4CBKwq6-ugehYfjH0yuT_Mbyl54MC=w919-h951-iv1">
+<style>
     body {
-      margin: 0;
-      font-family: 'Montserrat', sans-serif;
-      /* Fond d'écran de ton choix */
-      background-image: url('eos-1d-x-markii-image-management_tcm79-1345922 (1).jpg');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-attachment: fixed;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+        color: white;
+        background-image: url('eos-1d-x-markii-image-management_tcm79-1345922 (1).jpg');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center center;
     }
 
+    /* Header avec logos */
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 40px;
+        position: relative;
+        z-index: 2;
     }
 
-    /* Logos du header */
     header img {
-      height: 80px; /* taille par défaut desktop */
-      border-radius: 10px;
+        height: 80px; /* logos desktop */
+        border-radius: 10px;
     }
 
     h1 {
-      text-align: center;
-      margin-top: 100px;
-      font-size: 2.5rem;
-      letter-spacing: 2px;
-      text-shadow: 1px 1px 6px rgba(0,0,0,0.7);
+        text-align: center;
+        margin-top: 100px;
+        font-size: 2.5rem;
+        text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
     }
 
-    .btn-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 25px;
-      margin-top: 60px;
+    .image-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 30px;
+        padding: 40px 20px;
     }
 
-    .album-button {
-      display: inline-block;
-      background: #001eff;
-      color: black;
-      padding: 20px 60px;
-      font-size: 1.5rem;
-      border-radius: 50px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: all 0.3s ease;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    .image-card {
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
-    .album-button:hover {
-      background: #0000aa;
-      transform: translateY(-3px);
-      box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+    .image-card img {
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .image-card img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.7);
+    }
+
+    .image-card p {
+        margin-top: 10px;
+        font-size: 18px;
+        text-align: center;
+        text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
     }
 
     footer {
-      margin-top: auto;
-      text-align: right;
-      padding: 15px 30px;
-      font-size: 0.9rem;
-      color: #ccc;
+        text-align: right;
+        padding: 15px 30px;
+        font-size: 0.9rem;
+        color: #ccc;
     }
 
     /* Responsive */
-    @media (max-width: 600px) {
-      h1 {
-        font-size: 1.8rem;
-        margin-top: 60px;
-      }
-      .album-button {
-        padding: 15px 40px;
-        font-size: 1.2rem;
-      }
-      header img {
-        height: 50px; /* logos plus petits sur mobile */
-      }
+    @media (max-width: 1000px) {
+        .image-card {
+            width: 45%;
+        }
+        header img {
+            height: 60px;
+        }
     }
-  </style>
+
+    @media (max-width: 600px) {
+        .image-card {
+            width: 90%;
+        }
+        h1 {
+            font-size: 1.8rem;
+            margin-top: 60px;
+        }
+        header img {
+            height: 50px;
+        }
+    }
+</style>
 </head>
 <body>
 
-  <header>
+<header>
     <img src="drapeaualsa" alt="Logo gauche">
     <a href="https://www.facebook.com/mc.rixheim/?locale=fr_FR">
-      <img src="mcrx" alt="Logo MCR">
+        <img src="mcrx" alt="Logo droit">
     </a>
-  </header>
+</header>
 
-  <h1>📸 Gable Mathias Digital Albums</h1>
+<h1>📸 Gable Mathias Digital Albums</h1>
 
-  <div class="btn-container">
-    <a class="album-button" href="https://star16fpv.github.io/crossalbums/">LES ALBUMS PHOTOS CROSS</a>
-  </div>
+<div class="image-container">
 
-  <footer>
+    <div class="image-card">
+        <a href="https://drive.google.com/drive/folders/1BRkcjn9j-Et6a_wQDDAXfSsdgvHpRXrv?usp=sharing" target="_blank">
+            <img src="AM0I8091.jpg" alt="Photos Cross 11/05/2024">
+        </a>
+        <p>Photos Cross 11/05/2024</p>
+    </div>
+
+    <div class="image-card">
+        <a href="https://drive.google.com/drive/folders/1S0GU6QQEXHbTFx6uW_Mg4511MLQ92fLt?usp=sharing" target="_blank">
+            <img src="GX011008_1696099739636 (1).jpg" alt="Photos Cross 30/09 - 01/10 2023">
+        </a>
+        <p>Photos Cross 30/09 - 01/10 2023</p>
+    </div>
+
+    <div class="image-card">
+        <a href="https://drive.google.com/drive/folders/1Kp9WWTl-9G4z-IHzo6iZKJeFItc2X34v?usp=sharing" target="_blank">
+            <img src="AM0I7810.jpg" alt="Photos Cross 25/09/2022">
+        </a>
+        <p>Photos Cross 25/09/2022</p>
+    </div>
+
+    <div class="image-card">
+        <a href="https://drive.google.com/drive/folders/1SMZjBQZujoyQgs3MMTeNAAa3dVbSkfp5?usp=sharing" target="_blank">
+            <img src="AM0I5018-1-ConvertImage (1) (1) (1) (1) (1) (1).jpg" alt="Photos Cross 23/07/2022">
+        </a>
+        <p>Photos Cross 23/07/2022</p>
+    </div>
+
+    <div class="image-card">
+        <a href="https://drive.google.com/drive/folders/1pr8ZmsFapyQ-FbaoyS0nGeXvvnJtqMFN?usp=sharing" target="_blank">
+            <img src="AM0I2304-1-ConvertImage (1) (1) (1).jpg" alt="Photos Cross 26/05/2022">
+        </a>
+        <p>Photos Cross 26/05/2022</p>
+    </div>
+
+    <div class="image-card">
+        <a href="https://drive.google.com/drive/folders/1SRR47NcqUc49rVi2GBrT6ek2fb8kg4NF?usp=sharing" target="_blank">
+            <img src="AM0I0537-ConvertImage (1) (1).jpg" alt="Photos Cross 15/05/2022">
+        </a>
+        <p>Photos Cross 15/05/2022</p>
+    </div>
+
+</div>
+
+<footer>
     Version 0.14
-  </footer>
+</footer>
 
 </body>
 </html>
