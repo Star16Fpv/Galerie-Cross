@@ -18,6 +18,18 @@
         background-position: center center;
     }
 
+    /* Ajout du style pour le logo */
+    .logo {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .logo img {
+        height: 100px;
+        border-radius: 15px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+    }
+
     header {
         display: flex;
         justify-content: space-between;
@@ -34,7 +46,7 @@
 
     h1 {
         text-align: center;
-        margin-top: 100px;
+        margin-top: 30px; /* réduit car on a déjà le logo au-dessus */
         font-size: 2.5rem;
         text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
     }
@@ -98,6 +110,9 @@
         header img {
             height: 60px;
         }
+        .logo img {
+            height: 80px;
+        }
     }
 
     @media (max-width: 600px) {
@@ -106,10 +121,13 @@
         }
         h1 {
             font-size: 1.8rem;
-            margin-top: 60px;
+            margin-top: 20px;
         }
         header img {
             height: 50px;
+        }
+        .logo img {
+            height: 70px;
         }
         .info-text {
             font-size: 16px;
@@ -118,6 +136,11 @@
 </style>
 </head>
 <body>
+
+<!-- Logo centré en haut -->
+<div class="logo">
+    <img src="https://lh3.google.com/u/2/d/1Dw_4CBKwq6-ugehYfjH0yuT_Mbyl54MC=w919-h951-iv1" alt="Logo principal">
+</div>
 
 <header>
     <img src="drapeaualsa" alt="Logo gauche">
